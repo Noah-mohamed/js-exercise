@@ -1,0 +1,191 @@
+<html>
+
+<head>
+    <link  rel="stylesheet" href="css/all.min.css"/>
+    <link  rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link  rel="stylesheet" href="css/index_style.css"/>
+
+
+</head>
+<body>
+ 
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">News</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">general</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">business</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">entertainment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">health</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">science</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">sports</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">technology</a>
+        </li>
+      </ul>
+     
+    </div>
+  </nav>
+
+
+  <div class="container">
+      <h1 id="demo"></h1>
+      <h1 id="clock"></h1>
+ 
+
+    <div class="row my-4" id="rowData">
+       
+    </div>
+  </div>
+    
+ <div class="container py-3">
+   <h1>Empolyees</h1>
+    <div>
+      <div class="form-group">
+          <label>Empolyee Name:</label>
+          <input onblur="test()" onkeyup="validateName(this.value)" id="name" class="mb-2 form-control"/>
+      </div>
+      <div class="form-group">
+          <label>Empolyee Age:</label>
+          <input onkeyup="validateAge(this.value)" id="age" class="form-control"/>
+      </div>
+      <div class="form-group">
+          <label>Empolyee Phone:</label>
+          <input onkeyup="validatePhone(this.value)" id="phone" class="form-control"/>
+      </div>
+      <div class="form-group">
+          <label>Empolyee Title:</label>
+          <textarea id="title" class="form-control"></textarea>
+      </div>
+     
+      <button  id="addBtn" class="btn btn-info float-right"> add Empolyee</button>
+
+      <div class="clearfix"></div>
+         
+    </div>
+
+    <div class="btnContainer my-3">
+      <button class="button list active" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+      <button class="button grid" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+    </div>
+    <input onkeyup="search(this.value)" placeholder="search" class="form-control" />
+
+
+    <table class="table my-3 list-table">
+       <thead>
+         <th>Empolyee Name</th>
+         <th>Empolyee Age</th>
+         <th>Empolyee Phone</th>
+         <th>Empolyee Title</th>
+         <th></th>
+
+       </thead>
+       <tbody id="tableBody">
+
+       </tbody>
+    </table>
+    <div id="dataRow" class="row my-3 grid-row">
+      
+    </div>
+  </div> 
+
+
+  <div class="container py-5">
+    <div class="row">
+       <div class="col-md-4 mb-3">
+         <div class="item">
+           <img class="img-fluid" src="images/portfolio-1.jpg">
+           <div class="item-caption">
+             <h4>item title</h4>
+             <p>lputate at, tempus viverra turpis. Fusce condimentum nunc acs</p>
+           </div>
+         </div>
+       </div>
+       <div class="col-md-4 mb-3">
+        <div class="item">
+          <img class="img-fluid" src="images/portfolio-3.jpg">
+          <div class="item-caption">
+            <h4>item title</h4>
+            <p>lputate at, tempus viverra turpis. Fusce condimentum nunc acs</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="item">
+          <img class="img-fluid" src="images/portfolio-4.jpg">
+          <div class="item-caption">
+            <h4>item title</h4>
+            <p>lputate at, tempus viverra turpis. Fusce condimentum nunc acs</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="item">
+          <img class="img-fluid" src="images/portfolio-3.jpg">
+          <div class="item-caption">
+            <h4>item title</h4>
+            <p>lputate at, tempus viverra turpis. Fusce condimentum nunc acs</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="item">
+          <img class="img-fluid" src="images/portfolio-1.jpg">
+          <div class="item-caption">
+            <h4>item title</h4>
+            <p>lputate at, tempus viverra turpis. Fusce condimentum nunc acs</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="item">
+          <img class="img-fluid" src="images/portfolio-4.jpg">
+          <div class="item-caption">
+            <h4>item title</h4>
+            <p>lputate at, tempus viverra turpis. Fusce condimentum nunc acs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay-container d-flex justify-content-center align-items-center">
+        <i id="wClose" class="fa fa-2x fa-window-close"></i>
+        <div class="overlay-inner d-flex  align-items-center justify-content-between">
+            <i id="prev" class="fas fa-2x fa-arrow-alt-circle-left"></i>
+
+            <i id="next" class="fas fa-2x fa-arrow-alt-circle-right"></i>
+
+        </div>
+  </div>
+  
+
+
+  
+
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/index.js"></script>
+    
+
+</body>
+</html>
